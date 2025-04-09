@@ -44,7 +44,7 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -63,58 +63,45 @@
       padding-bottom: 10px;
     }
 
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      flex: 1 1 300px;
+    .doc-card {
       background: #f8f9fa;
       border-radius: 8px;
       padding: 20px;
+      margin: 15px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .doc-info {
+      flex: 1;
+    }
+
+    .doc-info h3 {
+      margin-top: 0;
+      color: #007bff;
     }
 
     .download-link {
       display: inline-block;
-      margin-top: 10px;
       padding: 10px 15px;
       background: #007bff;
       color: white;
       border-radius: 5px;
       text-decoration: none;
       transition: background 0.3s;
+      white-space: nowrap;
     }
 
     .download-link:hover {
       background: #0056b3;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
+    .update-time {
+      color: #6c757d;
+      font-size: 0.9em;
+      margin-top: 5px;
     }
 
     footer {
@@ -133,6 +120,13 @@
         display: block;
         margin: 10px 0;
       }
+      .doc-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .download-link {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -149,97 +143,72 @@
     <a href="#people">People</a>
     <a href="#gallery">Photo Gallery</a>
     <a href="#publications">Publications</a>
-    <a href="docs/">Documents</a>
   </nav>
 
   <div class="container">
     <section id="research">
       <h2>Research</h2>
-      <p>Our lab focuses on cutting-edge research in various scientific disciplines. We collaborate with industry partners and academic institutions worldwide to push the boundaries of knowledge.</p>
-      
-      <div class="card-container">
-        <div class="card">
-          <h3>Project Alpha</h3>
-          <p>Exploring novel materials for renewable energy applications.</p>
-          <a class="download-link" href="docs/research/project_alpha.pdf" download>Download PDF</a>
+      <div class="doc-card">
+        <div class="doc-info">
+          <h3>Research Overview</h3>
+          <p>Detailed information about our current research projects and directions.</p>
+          <p class="update-time">Last updated: 22 minutes ago</p>
         </div>
-        
-        <div class="card">
-          <h3>Project Beta</h3>
-          <p>Advancing computational models for biological systems.</p>
-          <a class="download-link" href="docs/research/project_beta.pdf" download>Download PDF</a>
-        </div>
+        <a class="download-link" href="docs/Research.docx" download>Download Research.docx</a>
       </div>
     </section>
 
     <section id="about">
       <h2>About Us</h2>
-      <p>Founded in 2010, our research lab has grown to become a leading center for interdisciplinary research. We pride ourselves on fostering innovation and collaboration.</p>
-      <p>Our facilities include state-of-the-art laboratories equipped with the latest technology to support our diverse research projects.</p>
-      <a class="download-link" href="docs/about/lab_brochure.pdf" download>Download Lab Brochure</a>
+      <div class="doc-card">
+        <div class="doc-info">
+          <h3>Lab Introduction</h3>
+          <p>Learn about our lab's history, mission, and facilities.</p>
+          <p class="update-time">Last updated: 22 minutes ago</p>
+        </div>
+        <a class="download-link" href="docs/About Us.docx" download>Download About Us.docx</a>
+      </div>
     </section>
 
     <section id="people">
       <h2>People</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>Dr. Jane Smith</h3>
-          <p>Principal Investigator</p>
-          <p>Expertise: Materials Science</p>
+      <div class="doc-card">
+        <div class="doc-info">
+          <h3>Team Members</h3>
+          <p>Meet our researchers and staff members.</p>
+          <p class="update-time">Last updated: 22 minutes ago</p>
         </div>
-        
-        <div class="card">
-          <h3>Dr. John Doe</h3>
-          <p>Senior Researcher</p>
-          <p>Expertise: Computational Biology</p>
-        </div>
-        
-        <div class="card">
-          <h3>Sarah Johnson</h3>
-          <p>PhD Candidate</p>
-          <p>Research Area: Nanotechnology</p>
-        </div>
+        <a class="download-link" href="docs/People.docx" download>Download People.docx</a>
       </div>
-      <a class="download-link" href="docs/people/team_directory.pdf" download>Download Team Directory</a>
     </section>
 
     <section id="gallery">
       <h2>Photo Gallery</h2>
-      <div class="gallery">
-        <img src="docs/gallery/lab1.jpg" alt="Lab facility">
-        <img src="docs/gallery/team1.jpg" alt="Research team">
-        <img src="docs/gallery/experiment1.jpg" alt="Experiment in progress">
-        <img src="docs/gallery/conference1.jpg" alt="Conference presentation">
+      <div class="doc-card">
+        <div class="doc-info">
+          <h3>Lab Photos</h3>
+          <p>View images of our lab activities and events.</p>
+          <p class="update-time">Last updated: 22 minutes ago</p>
+        </div>
+        <a class="download-link" href="docs/Photo Gallery.docx" download>Download Photo Gallery.docx</a>
       </div>
-      <a class="download-link" href="docs/gallery/gallery_archive.zip" download>Download Gallery Archive</a>
     </section>
 
     <section id="publications">
       <h2>Publications</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>2024</h3>
-          <ul>
-            <li>Smith, J. et al. (2024). Advanced Materials, 36(4), 123-134.</li>
-            <li>Doe, J. et al. (2024). Nature Computational Science, 2(3), 45-56.</li>
-          </ul>
+      <div class="doc-card">
+        <div class="doc-info">
+          <h3>Research Papers</h3>
+          <p>Access our latest publications and papers.</p>
+          <p class="update-time">Last updated: 22 minutes ago</p>
         </div>
-        
-        <div class="card">
-          <h3>2023</h3>
-          <ul>
-            <li>Johnson, S. et al. (2023). Journal of Nanotechnology, 15(2), 78-89.</li>
-            <li>Smith, J. & Doe, J. (2023). Science Advances, 9(12), eabc1234.</li>
-          </ul>
-        </div>
+        <a class="download-link" href="docs/Publications.docx" download>Download Publications.docx</a>
       </div>
-      <a class="download-link" href="docs/publications/full_list.pdf" download>Download Full Publication List</a>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Our Research Lab | Contact: info@researchlab.edu | Phone: (123) 456-7890</p>
-    <p>123 Science Avenue, Research City, RC 12345</p>
+    <p>&copy; 2025 Our Research Lab | Contact: info@researchlab.edu</p>
   </footer>
 
 </body>
