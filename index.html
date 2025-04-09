@@ -1,140 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Research Lab</title>
+  <title>Research Lab Content</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8f9fa;
       line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
-
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
     header {
-      background: #343a40;
+      background: #2c3e50;
       color: white;
-      padding: 2em;
+      padding: 2rem;
       text-align: center;
     }
-
     nav {
-      background: #495057;
-      padding: 1em;
-      text-align: center;
+      background: #34495e;
+      padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-
     nav a {
       color: white;
+      text-decoration: none;
       margin: 0 15px;
-      text-decoration: none;
       font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: background 0.3s;
     }
-
-    nav a:hover {
-      background: #6c757d;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
     section {
       background: white;
-      margin: 2em auto;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #343a40;
-      border-bottom: 2px solid #dee2e6;
-      padding-bottom: 10px;
-    }
-
-    .doc-card {
-      background: #f8f9fa;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 15px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .doc-info {
-      flex: 1;
-    }
-
-    .doc-info h3 {
-      margin-top: 0;
-      color: #007bff;
-    }
-
-    .download-link {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #007bff;
-      color: white;
+      margin: 20px 0;
+      padding: 30px;
       border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-      white-space: nowrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    .download-link:hover {
-      background: #0056b3;
+    h1, h2, h3 {
+      color: #2c3e50;
     }
-
-    .update-time {
-      color: #6c757d;
-      font-size: 0.9em;
-      margin-top: 5px;
-    }
-
     footer {
-      text-align: center;
-      padding: 2em;
-      background: #343a40;
+      background: #2c3e50;
       color: white;
-      margin-top: 2em;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
     }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 10px 0;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .doc-card {
-        flex-direction: column;
-        text-align: center;
-      }
-      .download-link {
-        margin-top: 10px;
-      }
+    .content-block {
+      margin-bottom: 20px;
+    }
+    .content-block h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Welcome to Our Research Lab</h1>
-    <p>Exploring Science and Innovation</p>
+    <h1>Research Lab Content</h1>
   </header>
 
   <nav>
@@ -146,70 +77,103 @@
   </nav>
 
   <div class="container">
+    <!-- Research Section -->
     <section id="research">
       <h2>Research</h2>
-      <div class="doc-card">
-        <div class="doc-info">
-          <h3>Research Overview</h3>
-          <p>Detailed information about our current research projects and directions.</p>
-          <p class="update-time">Last updated: 22 minutes ago</p>
-        </div>
-        <a class="download-link" href="docs/Research.docx" download>Download Research.docx</a>
+      
+      <div class="content-block">
+        <h3>Current Projects</h3>
+        <p>Our lab is currently working on several groundbreaking projects in the field of nanotechnology and materials science.</p>
+        <ul>
+          <li>Project A: Developing new nanomaterials for energy storage</li>
+          <li>Project B: Studying quantum effects in 2D materials</li>
+          <li>Project C: Applications of nanotechnology in medicine</li>
+        </ul>
+      </div>
+      
+      <div class="content-block">
+        <h3>Research Facilities</h3>
+        <p>We have state-of-the-art facilities including:</p>
+        <ul>
+          <li>Advanced microscopy suite</li>
+          <li>Clean room for nanofabrication</li>
+          <li>High-performance computing cluster</li>
+        </ul>
       </div>
     </section>
 
+    <!-- About Us Section -->
     <section id="about">
       <h2>About Us</h2>
-      <div class="doc-card">
-        <div class="doc-info">
-          <h3>Lab Introduction</h3>
-          <p>Learn about our lab's history, mission, and facilities.</p>
-          <p class="update-time">Last updated: 22 minutes ago</p>
-        </div>
-        <a class="download-link" href="docs/About Us.docx" download>Download About Us.docx</a>
+      
+      <div class="content-block">
+        <h3>Lab History</h3>
+        <p>Founded in 2010, our lab has grown from a small research group to a leading center for materials science research.</p>
+      </div>
+      
+      <div class="content-block">
+        <h3>Mission Statement</h3>
+        <p>Our mission is to advance scientific knowledge and develop innovative solutions to real-world problems through interdisciplinary research.</p>
       </div>
     </section>
 
+    <!-- People Section -->
     <section id="people">
       <h2>People</h2>
-      <div class="doc-card">
-        <div class="doc-info">
-          <h3>Team Members</h3>
-          <p>Meet our researchers and staff members.</p>
-          <p class="update-time">Last updated: 22 minutes ago</p>
-        </div>
-        <a class="download-link" href="docs/People.docx" download>Download People.docx</a>
+      
+      <div class="content-block">
+        <h3>Principal Investigator</h3>
+        <p><strong>Dr. Jane Smith</strong><br>
+        Professor of Materials Science<br>
+        Email: j.smith@university.edu</p>
+      </div>
+      
+      <div class="content-block">
+        <h3>Research Staff</h3>
+        <p><strong>Dr. John Doe</strong> - Senior Researcher<br>
+        <strong>Dr. Alice Johnson</strong> - Postdoctoral Fellow</p>
+      </div>
+      
+      <div class="content-block">
+        <h3>Students</h3>
+        <p><strong>Michael Brown</strong> - PhD Candidate<br>
+        <strong>Sarah Lee</strong> - MSc Student</p>
       </div>
     </section>
 
+    <!-- Photo Gallery Section -->
     <section id="gallery">
       <h2>Photo Gallery</h2>
-      <div class="doc-card">
-        <div class="doc-info">
-          <h3>Lab Photos</h3>
-          <p>View images of our lab activities and events.</p>
-          <p class="update-time">Last updated: 22 minutes ago</p>
+      
+      <div class="content-block">
+        <h3>Lab Photos</h3>
+        <p>Images of our lab facilities and team members at work:</p>
+        <!-- You would replace these with actual images -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Lab Image 1</div>
+          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Lab Image 2</div>
+          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Team Photo</div>
         </div>
-        <a class="download-link" href="docs/Photo Gallery.docx" download>Download Photo Gallery.docx</a>
       </div>
     </section>
 
+    <!-- Publications Section -->
     <section id="publications">
       <h2>Publications</h2>
-      <div class="doc-card">
-        <div class="doc-info">
-          <h3>Research Papers</h3>
-          <p>Access our latest publications and papers.</p>
-          <p class="update-time">Last updated: 22 minutes ago</p>
-        </div>
-        <a class="download-link" href="docs/Publications.docx" download>Download Publications.docx</a>
+      
+      <div class="content-block">
+        <h3>Recent Publications</h3>
+        <ol>
+          <li>Smith, J. et al. (2023). "Novel materials for energy applications". Nature Materials, 22(3), 123-135.</li>
+          <li>Doe, J. et al. (2023). "Quantum effects in 2D systems". Physical Review Letters, 130(5), 056801.</li>
+          <li>Johnson, A. et al. (2022). "Medical applications of nanotechnology". Science Advances, 8(15), eabn3182.</li>
+        </ol>
       </div>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Our Research Lab | Contact: info@researchlab.edu</p>
+    <p>&copy; 2025 Research Lab. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
