@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Our Research Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* 全局样式 */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
       background: #f8f9fa;
     }
-
     header {
       background: #343a40;
-      color: white;
+      color: #fff;
       padding: 2em;
       text-align: center;
     }
-
     nav {
       background: #495057;
-      padding: 1em;
       text-align: center;
+      padding: 1em;
     }
-
     nav a {
-      color: white;
-      margin: 0 20px;
+      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
-    section {
-      background: white;
+    .container {
       max-width: 800px;
       margin: 2em auto;
+      background: #fff;
       padding: 2em;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none; /* 默认隐藏所有模块 */
     }
-
-    h2 {
-      color: #343a40;
+    .container.active {
+      display: block; /* 当前激活模块显示 */
     }
-
     .download-link {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
       padding: 10px 15px;
       background: #007bff;
-      color: white;
-      border-radius: 5px;
+      color: #fff;
       text-decoration: none;
+      border-radius: 4px;
     }
-
     .download-link:hover {
       background: #0056b3;
     }
-
     footer {
       text-align: center;
-      padding: 2em;
+      padding: 1.5em;
       background: #e9ecef;
       color: #6c757d;
       margin-top: 2em;
@@ -74,51 +68,70 @@
 <body>
 
   <header>
-    <h1>Welcome to Our Research Lab</h1>
-    <p>Exploring Science and Innovation</p>
+    <h1>Our Research Lab</h1>
+    <p>Explore our research and more</p>
   </header>
 
   <nav>
-    <a href="#research">Research</a>
-    <a href="#about">About Us</a>
-    <a href="#people">People</a>
-    <a href="#gallery">Photo Gallery</a>
-    <a href="#publications">Publications</a>
+    <a onclick="showModule('research')">Research</a>
+    <a onclick="showModule('about')">About Us</a>
+    <a onclick="showModule('people')">People</a>
+    <a onclick="showModule('gallery')">Photo Gallery</a>
+    <a onclick="showModule('publications')">Publications</a>
   </nav>
 
-  <section id="research">
+  <!-- 模块：Research -->
+  <div id="research" class="container active">
     <h2>Research</h2>
     <p>Download our research overview:</p>
     <a class="download-link" href="docs/Research.pdf" target="_blank">Download Research.pdf</a>
-  </section>
+  </div>
 
-  <section id="about">
+  <!-- 模块：About Us -->
+  <div id="about" class="container">
     <h2>About Us</h2>
     <p>Learn more about our lab:</p>
     <a class="download-link" href="docs/About Us.pdf" target="_blank">Download About Us.pdf</a>
-  </section>
+  </div>
 
-  <section id="people">
+  <!-- 模块：People -->
+  <div id="people" class="container">
     <h2>People</h2>
-    <p>Meet the team:</p>
+    <p>Meet our team:</p>
     <a class="download-link" href="docs/People.pdf" target="_blank">Download People.pdf</a>
-  </section>
+  </div>
 
-  <section id="gallery">
+  <!-- 模块：Photo Gallery -->
+  <div id="gallery" class="container">
     <h2>Photo Gallery</h2>
-    <p>Lab moments:</p>
+    <p>Explore our lab photos:</p>
     <a class="download-link" href="docs/Photo Gallery.pdf" target="_blank">Download Photo Gallery.pdf</a>
-  </section>
+  </div>
 
-  <section id="publications">
+  <!-- 模块：Publications -->
+  <div id="publications" class="container">
     <h2>Publications</h2>
-    <p>View our latest publications:</p>
+    <p>Download our latest publications:</p>
     <a class="download-link" href="docs/Publications.pdf" target="_blank">Download Publications.pdf</a>
-  </section>
+  </div>
 
   <footer>
     &copy; 2025 Our Research Lab
   </footer>
 
+  <script>
+    // 显示对应模块，隐藏其他模块
+    function showModule(moduleId) {
+      var modules = document.querySelectorAll('.container');
+      modules.forEach(function(mod) {
+        mod.classList.remove('active');
+      });
+      var activeModule = document.getElementById(moduleId);
+      if (activeModule) {
+        activeModule.classList.add('active');
+      }
+    }
+  </script>
+  
 </body>
 </html>
