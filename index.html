@@ -3,33 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Lab Content</title>
+  <title>Research Lab - PDF Viewer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
       background: #f5f5f5;
-      color: #333;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
     }
     header {
       background: #2c3e50;
       color: white;
-      padding: 2rem;
+      padding: 20px;
       text-align: center;
     }
     nav {
       background: #34495e;
-      padding: 1rem;
+      padding: 15px;
       position: sticky;
       top: 0;
       z-index: 100;
+      text-align: center;
     }
     nav a {
       color: white;
@@ -37,33 +30,33 @@
       margin: 0 15px;
       font-weight: bold;
     }
-    section {
-      background: white;
+    .pdf-container {
+      width: 100%;
+      height: 80vh;
       margin: 20px 0;
-      padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
+      background: white;
     }
-    h1, h2, h3 {
+    .section {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    h2 {
       color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
     }
     footer {
       background: #2c3e50;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 30px;
-    }
-    .content-block {
-      margin-bottom: 20px;
-    }
-    .content-block h3 {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Research Lab Content</h1>
   </header>
@@ -76,104 +69,64 @@
     <a href="#publications">Publications</a>
   </nav>
 
-  <div class="container">
-    <!-- Research Section -->
-    <section id="research">
-      <h2>Research</h2>
-      
-      <div class="content-block">
-        <h3>Current Projects</h3>
-        <p>Our lab is currently working on several groundbreaking projects in the field of nanotechnology and materials science.</p>
-        <ul>
-          <li>Project A: Developing new nanomaterials for energy storage</li>
-          <li>Project B: Studying quantum effects in 2D materials</li>
-          <li>Project C: Applications of nanotechnology in medicine</li>
-        </ul>
-      </div>
-      
-      <div class="content-block">
-        <h3>Research Facilities</h3>
-        <p>We have state-of-the-art facilities including:</p>
-        <ul>
-          <li>Advanced microscopy suite</li>
-          <li>Clean room for nanofabrication</li>
-          <li>High-performance computing cluster</li>
-        </ul>
-      </div>
-    </section>
+  <div class="section" id="research">
+    <h2>Research</h2>
+    <div class="pdf-container">
+      <embed 
+        src="docs/Research.pdf#toolbar=1&navpanes=0" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    </div>
+  </div>
 
-    <!-- About Us Section -->
-    <section id="about">
-      <h2>About Us</h2>
-      
-      <div class="content-block">
-        <h3>Lab History</h3>
-        <p>Founded in 2010, our lab has grown from a small research group to a leading center for materials science research.</p>
-      </div>
-      
-      <div class="content-block">
-        <h3>Mission Statement</h3>
-        <p>Our mission is to advance scientific knowledge and develop innovative solutions to real-world problems through interdisciplinary research.</p>
-      </div>
-    </section>
+  <div class="section" id="about">
+    <h2>About Us</h2>
+    <div class="pdf-container">
+      <embed 
+        src="docs/About Us.pdf#toolbar=1&navpanes=0" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    </div>
+  </div>
 
-    <!-- People Section -->
-    <section id="people">
-      <h2>People</h2>
-      
-      <div class="content-block">
-        <h3>Principal Investigator</h3>
-        <p><strong>Dr. Jane Smith</strong><br>
-        Professor of Materials Science<br>
-        Email: j.smith@university.edu</p>
-      </div>
-      
-      <div class="content-block">
-        <h3>Research Staff</h3>
-        <p><strong>Dr. John Doe</strong> - Senior Researcher<br>
-        <strong>Dr. Alice Johnson</strong> - Postdoctoral Fellow</p>
-      </div>
-      
-      <div class="content-block">
-        <h3>Students</h3>
-        <p><strong>Michael Brown</strong> - PhD Candidate<br>
-        <strong>Sarah Lee</strong> - MSc Student</p>
-      </div>
-    </section>
+  <div class="section" id="people">
+    <h2>People</h2>
+    <div class="pdf-container">
+      <embed 
+        src="docs/People.pdf#toolbar=1&navpanes=0" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    </div>
+  </div>
 
-    <!-- Photo Gallery Section -->
-    <section id="gallery">
-      <h2>Photo Gallery</h2>
-      
-      <div class="content-block">
-        <h3>Lab Photos</h3>
-        <p>Images of our lab facilities and team members at work:</p>
-        <!-- You would replace these with actual images -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
-          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Lab Image 1</div>
-          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Lab Image 2</div>
-          <div style="background: #eee; height: 150px; display: flex; align-items: center; justify-content: center;">Team Photo</div>
-        </div>
-      </div>
-    </section>
+  <div class="section" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="pdf-container">
+      <embed 
+        src="docs/Photo Gallery.pdf#toolbar=1&navpanes=0" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    </div>
+  </div>
 
-    <!-- Publications Section -->
-    <section id="publications">
-      <h2>Publications</h2>
-      
-      <div class="content-block">
-        <h3>Recent Publications</h3>
-        <ol>
-          <li>Smith, J. et al. (2023). "Novel materials for energy applications". Nature Materials, 22(3), 123-135.</li>
-          <li>Doe, J. et al. (2023). "Quantum effects in 2D systems". Physical Review Letters, 130(5), 056801.</li>
-          <li>Johnson, A. et al. (2022). "Medical applications of nanotechnology". Science Advances, 8(15), eabn3182.</li>
-        </ol>
-      </div>
-    </section>
+  <div class="section" id="publications">
+    <h2>Publications</h2>
+    <div class="pdf-container">
+      <embed 
+        src="docs/Publications.pdf#toolbar=1&navpanes=0" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 Research Lab. All rights reserved.</p>
+    <p>&copy; 2023 Research Lab. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
