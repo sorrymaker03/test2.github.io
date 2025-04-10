@@ -5,7 +5,6 @@
   <title>Our Research Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* 全局样式 */
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
@@ -39,10 +38,10 @@
       padding: 2em;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: none; /* 默认隐藏所有模块 */
+      display: none;
     }
     .container.active {
-      display: block; /* 当前激活模块显示 */
+      display: block;
     }
     .pdf-viewer {
       width: 100%;
@@ -73,34 +72,29 @@
     <a onclick="showModule('publications')">Publications</a>
   </nav>
 
-  <!-- 模块：Research -->
   <div id="research" class="container active">
     <h2>Research</h2>
-    <embed class="pdf-viewer" src="docs/Research.pdf" type="application/pdf">
+    <embed class="pdf-viewer" src="docs/Research.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
   </div>
 
-  <!-- 模块：About Us -->
   <div id="about" class="container">
     <h2>About Us</h2>
-    <embed class="pdf-viewer" src="docs/About Us.pdf" type="application/pdf">
+    <embed class="pdf-viewer" src="docs/About Us.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
   </div>
 
-  <!-- 模块：People -->
   <div id="people" class="container">
     <h2>People</h2>
-    <embed class="pdf-viewer" src="docs/People.pdf" type="application/pdf">
+    <embed class="pdf-viewer" src="docs/People.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
   </div>
 
-  <!-- 模块：Photo Gallery -->
   <div id="gallery" class="container">
     <h2>Photo Gallery</h2>
-    <embed class="pdf-viewer" src="docs/Photo Gallery.pdf" type="application/pdf">
+    <embed class="pdf-viewer" src="docs/Photo Gallery.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
   </div>
 
-  <!-- 模块：Publications -->
   <div id="publications" class="container">
     <h2>Publications</h2>
-    <embed class="pdf-viewer" src="docs/Publications.pdf" type="application/pdf">
+    <embed class="pdf-viewer" src="docs/Publications.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
   </div>
 
   <footer>
@@ -108,7 +102,6 @@
   </footer>
 
   <script>
-    // 切换显示对应模块，隐藏其他模块
     function showModule(moduleId) {
       var modules = document.querySelectorAll('.container');
       modules.forEach(function(mod) {
