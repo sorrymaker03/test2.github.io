@@ -2,43 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Research Lab</title>
+  <title>Ping Mu'lab - Yale University</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      background: #f1f5f9;
     }
     header {
-      background: #343a40;
+      background: #0d6efd;
       color: #fff;
-      padding: 2em;
+      padding: 3em 2em;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-top: 0.5em;
     }
     nav {
-      background: #495057;
+      background: #343a40;
       text-align: center;
       padding: 1em;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 1.1em;
     }
     nav a:hover {
       text-decoration: underline;
     }
     .container {
       max-width: 800px;
-      margin: 2em auto;
+      margin: 3em auto;
       background: #fff;
       padding: 2em;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: none;
+      animation: fadeIn 1s ease-in-out;
     }
     .container.active {
       display: block;
@@ -55,12 +66,24 @@
       color: #6c757d;
       margin-top: 2em;
     }
+    footer p {
+      margin: 0;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Our Research Lab</h1>
+    <h1>Ping Mu'lab</h1>
+    <p>Yale University - Department of Urology</p>
     <p>Explore our research and more</p>
   </header>
 
@@ -104,7 +127,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Our Research Lab
+    <p>&copy; 2025 Ping Mu'lab, Yale University, Department of Urology</p>
   </footer>
 
   <script>
@@ -119,6 +142,6 @@
       }
     }
   </script>
-  
+
 </body>
 </html>
